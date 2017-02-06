@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-source 'https://rails-assets.org' do
-  gem 'rails-assets-tether', '>= 1.3.3'
-end
+# source 'https://rails-assets.org' do
+#   gem 'rails-assets-tether', '>= 1.3.3'
+# end
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
