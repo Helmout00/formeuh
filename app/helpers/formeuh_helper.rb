@@ -1,2 +1,0 @@
-module FormeuhHelper
-end
