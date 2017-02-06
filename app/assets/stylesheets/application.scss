@@ -11,5 +11,24 @@
  * It is generally better to create a new file per style scope.
  *= require_tree
  */
-  @import "bootstrap";
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+navbar {
+  padding-top: 70px;
+  width: 100%;
+  z-index: 1;
+}
+
+.form-inline {
+  margin: 10px;
+  width: 300px;
+}
+
+.input-group {
+  width: 300px;
+}
 
