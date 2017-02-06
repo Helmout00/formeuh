@@ -21,7 +21,6 @@
           </button>
           <a class="navbar-brand" href="#">Brand</a>
         </div>
-
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
@@ -34,21 +33,22 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Connexion<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <form class="form-inline">
-                  <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                    <input type="text" class="form-control" placeholder="Login" aria-describedby="basic-addon1">
+                <form class="new_user" id="new_user" action="/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="MnT0gETAkiFNEKVceUNnwwgOzqBpJ+EKI+my4BfhArjannHussd1LFxtbXjT6AxOoi658UuwPen4OZ9j/L8Gvg==" />
+                  <div class="field">
+                    <label for="user_email">Email</label><br />
+                    <input autofocus="autofocus" type="email" value="" name="user[email]" id="user_email" />
                   </div>
-                </form>
-                <form class="form-inline">
-                  <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-unlock"></i></span>
-                    <input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+                  <div class="field">
+                    <label for="user_password">Password</label><br />
+                    <input autocomplete="off" type="password" name="user[password]" id="user_password" />
                   </div>
-                </form>
-                <form class="form-inline">
-                  <button type="submit" class="btn btn-xs btn-primary pull-left"><i class="fa fa-check"></i> Valider</button>
-                  <button type="button" class="btn btn-xs btn-inverse pull-right"><i class="fa fa-times"></i> Annuler</button>
+                  <div class="field">
+                    <input name="user[remember_me]" type="hidden" value="0" /><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
+                    <label for="user_remember_me">Remember me</label>
+                  </div>
+                  <div class="actions">
+                    <input type="submit" name="commit" value="Log in" data-disable-with="Log in" />
+                  </div>
                 </form>
               </ul>
             </li>
@@ -58,6 +58,7 @@
     <div class="container">
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
+
       <%= yield %>
     </div>
 
