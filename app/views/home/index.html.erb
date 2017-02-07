@@ -1,2 +1,22 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Sign in count</th>
+      <th>Current sign in at</th>
+      <th>Last sign in at</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+    <tr>
+      <th><%= user.email %></th>
+      <th><%= user.sign_in_count %></th>
+      <th><%= user.current_sign_in_at %></th>
+      <th><%= user.last_sign_in_at %></th>
+    </tr>
+    <% end %>
+  </tbody>
+
+</table>
