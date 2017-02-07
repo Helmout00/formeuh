@@ -52,7 +52,7 @@
                   <button type="submit" name="commit" value="Log in" data-disable-with="Log in" class="btn btn-xs btn-primary pull-left"><i class="fa fa-check"></i> Valider</button>
                   <%= content_tag :button, class: "btn btn-xs btn-inverse pull-right" do
                     link_to destroy_user_session_path do
-                      (content_tag :i, " Annuler", class: "fa fa-times")
+                      (content_tag :i, "", class: "fa fa-times")+ " Annuler"
                     end
                   end %>
                 </form>
