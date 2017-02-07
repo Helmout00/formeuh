@@ -30,21 +30,31 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Connexion<span class="caret"></span></a>
               <ul class="dropdown-menu">
+              <form class="new_user" id="new_user" action="/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+              <input type="hidden" name="authenticity_token" value="MnT0gETAkiFNEKVceUNnwwgOzqBpJ+EKI+my4BfhArjannHussd1LFxtbXjT6AxOoi658UuwPen4OZ9j/L8Gvg==" /></form>
                 <form class="form-inline">
                   <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                    <input type="text" class="form-control" placeholder="Login" aria-describedby="basic-addon1">
+                    <span for="user_email" class="input-group-addon"><i class="fa fa-at"></i></span>
+                    <input autofocus="autofocus" class="form-control" type="email" value="" name="user[email]" id="user_email" placeholder="Email" aria-describedby="basic-addon"> 
                   </div>
                 </form>
                 <form class="form-inline">
                   <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-unlock"></i></span>
-                    <input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+                    <span for="user_password" class="input-group-addon"><i class="fa fa-unlock"></i></span>
+                    <input autocomplete="off" class="form-control" type="password" name="user[password]" id="user_password" placeholder="Mot de passe" aria-describedby="basic-addon"> 
                   </div>
                 </form>
                 <form class="form-inline">
-                  <button type="submit" class="btn btn-xs btn-primary pull-left"><i class="fa fa-check"></i> Valider</button>
-                  <button type="button" class="btn btn-xs btn-inverse pull-right"><i class="fa fa-times"></i> Annuler</button>
+                  <input name="user[remember_me]" type="hidden" value="0" /><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
+                  <label for="user_remember_me">Souviens-toi de moi</label>
+                </form>
+                <form class="form-inline">
+                  <button type="submit" name="commit" value="Log in" data-disable-with="Log in" class="btn btn-xs btn-primary pull-left"><i class="fa fa-check"></i> Valider</button>
+                  <%= content_tag :button, class: "btn btn-xs btn-inverse pull-right" do
+                    link_to destroy_user_session_path do
+                      (content_tag :i, " Annuler", class: "fa fa-times")
+                    end
+                  end %>
                 </form>
               </ul>
             </li>
