@@ -2,6 +2,7 @@
   <thead>
     <tr>
       <th>Email</th>
+      <th>Password</th>
       <th>Sign in count</th>
       <th>Current sign in at</th>
       <th>Last sign in at</th>
@@ -12,6 +13,7 @@
     <% @users.each do |user| %>
     <tr>
       <th><%= user.email %></th>
+      <th><%= user.encrypted_password %></th>
       <th><%= user.sign_in_count %></th>
       <th><%= user.current_sign_in_at %></th>
       <th><%= user.last_sign_in_at %></th>
@@ -20,3 +22,8 @@
   </tbody>
 
 </table>
+
+<textarea name="editor1"></textarea>
+  <script>
+    CKEDITOR.replace( 'editor1' );
+  </script>
