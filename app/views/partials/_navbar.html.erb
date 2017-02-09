@@ -1,4 +1,53 @@
-<nav class="navbar navbar-default">
+<% if current_user %>
+  <%= content_tag :nav,
+    class: "navbar navbar-primary" do %>
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <%= content_tag :li,
+                class: "active" do
+                link_to home_index_path do 
+                  (content_tag :i, "", class: "fa fa-home") + " Accueil"
+                end
+            end %>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" id="user" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> Utilisateur<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><span class="badge badge-danger pull-right">3</span>Action</a></li>
+                <li><a href="#">Autre action</a></li>
+                <li><a href="#"><span class="badge badge-success pull-right">3</span>Exemple</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Titre exemple</li>
+                <li><a href="#">Lien séparer</a></li>
+                <li><a href="#">Autre lien séparer</a></li>
+              </ul>
+            </li>
+            <%= content_tag :li do
+              link_to destroy_user_session_path, method: :delete do
+                (content_tag :i, " Déconnexion", class: "fa fa-sign-out text-danger")
+              end
+            end %>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  <% end %>
+<% else %>
+  <%= content_tag :nav,
+    class: "navbar navbar-default" do %>
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -66,5 +115,6 @@
             </li>
            </ul> 
         </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
+    </div><!-- /.container-fluid -->
+  <% end %>
+<% end %>
