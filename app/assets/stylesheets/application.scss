@@ -27,9 +27,12 @@ navbar {
   color: #ffffff;
 }
 
+.navbar-primary .navbar-nav li a {
+  background-color: transparent;
+}
+
 #user {
   color: #444444;
-  background-color: transparent;
 }
 
 .form-inline {
