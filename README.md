@@ -1,3 +1,5 @@
+[![Gitter](https://badges.gitter.im/gitterHQ/gitter.svg)](https://gitter.im/gitterHQ/gitter)
+
 # README
 
 This README would normally document whatever steps are necessary to get the
