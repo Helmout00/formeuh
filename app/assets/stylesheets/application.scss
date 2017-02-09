@@ -23,11 +23,11 @@ navbar {
   z-index: 1;
 }
 
-.navbar-primary .active a{
+.navbar-success .active a{
   color: #ffffff;
 }
 
-.navbar-primary .navbar-nav li a {
+.navbar-success .navbar-nav li a {
   background-color: transparent;
 }
 
@@ -45,7 +45,6 @@ navbar {
 }
 
 .main-footer {
-    background-color: #e7e7e7;
     height: auto;
     position: absolute;
     left: 0;
