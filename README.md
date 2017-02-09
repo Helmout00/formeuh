@@ -1,4 +1,4 @@
-[![Gitter](https://badges.gitter.im/gitterHQ/gitter.svg)](https://gitter.im/gitterHQ/gitter)
+[![Gitter](https://badges.gitter.im/formeuh/gitter.svg)](https://gitter.im/formeuh/gitter)
 
 # README
 
