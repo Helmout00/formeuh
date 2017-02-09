@@ -41,6 +41,7 @@ gem 'jbuilder', '~> 2.5'
 
 #bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'active_bootstrap_skin'
 
 #font-awesome
 gem 'font-awesome-sass'
