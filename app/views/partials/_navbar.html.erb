@@ -19,7 +19,7 @@
             <%= content_tag :li,
                 class: "active" do
                 link_to home_index_path do 
-                  (content_tag :i, "", class: "fa fa-home") + " " + t('.home')
+                  (content_tag :i, " ", class: "fa fa-home")+" "+t('.home')
                 end
             end %>
           </ul>
@@ -39,7 +39,7 @@
             </li>
             <%= content_tag :li do
               link_to destroy_user_session_path, method: :delete do
-                (content_tag :i, t('.already_signed_out'), class: "fa fa-sign-out text-danger")
+                (content_tag :i, " "+t('.sign_out'), class: "fa fa-sign-out text-danger")
               end
             end %>
           </ul>
@@ -67,14 +67,14 @@
             <%= content_tag :li,
               class: "active" do
                 link_to home_index_path do 
-                  (content_tag :i, "", class: "fa fa-home") + " " + t('.home')
+                  (content_tag :i, " ", class: "fa fa-home")+" "+t('.home')
                 end
             end %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <%= content_tag :li do
               link_to new_user_registration_path do
-                (content_tag :i, t('.sign_up'), class: "fa fa-sign-in text-success")
+                (content_tag :i, " "+t('.sign_up'), class: "fa fa-sign-in text-success")
               end
             end %>
             <li class="dropdown">

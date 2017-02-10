@@ -1,12 +1,13 @@
 fr:
-  activerecord:
-    attributes:
+  partials:
+    navbar:
       home: Accueil
       sign_up: Inscription
       sign_in: Connexion
-      already_signed_out: Déconnexion
+      sign_out: Déconnexion
       email: Courriel
       password: Mot de passe
       remember_me: Se souvenir de moi
       forgot_your_password: Mot de passe oublié ?
-      
+  
+        

@@ -20,12 +20,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  activerecord:
-    attributes:
+  partials:
+    navbar:
       home: Home
       sign_up: Sign up
       sign_in: Sign in
-      already_signed_out: Signed out
+      sign_out: Signed out
       email: Email
       password: Password
       remember_me: Remember me
