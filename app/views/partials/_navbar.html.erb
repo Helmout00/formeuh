@@ -1,6 +1,6 @@
 <% if current_user %>
   <%= content_tag :nav,
-    class: "navbar navbar-primary" do %>
+    class: "navbar navbar-success" do %>
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -10,7 +10,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brand</a>
+          <a id= "user" class="navbar-brand" href="#">Brand</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -25,7 +25,8 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <a href="#" id="user" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> Utilisateur<span class="caret"></span></a>
+              <a href="#" id="user" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-user"></i><%= " " + current_user.email %><span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#"><span class="badge badge-danger pull-right">3</span>Action</a></li>
                 <li><a href="#">Autre action</a></li>
@@ -93,8 +94,9 @@
                   <div class="form-inline">
                     <div class="input-group">
                       <span for="user_password" class="input-group-addon"><i class="fa fa-unlock"></i></span>
-                      <input autocomplete="off" class="form-control" type="password" name="user[password]" id="user_password" placeholder="Mot de passe" aria-describedby="basic-addon"> 
+                      <input autocomplete="off" class="form-control" type="password" name="user[password]" id="user_password" placeholder="Mot de passe" aria-describedby="basic-addon">
                     </div>
+                    <%= link_to "Mot de passe oublié ?", new_user_password_path %><br />
                   </div>
                 </div> 
                 <div class="form-inline">
@@ -104,11 +106,6 @@
                 <div class="actions">
                   <div class="form-inline">
                     <button type="submit" name="commit" value="Log in" data-disable-with="Log in" class="btn btn-xs btn-primary pull-left"><i class="fa fa-check"></i> Valider</button>
-                    <%= content_tag :button, class: "btn btn-xs btn-inverse pull-right" do
-                      link_to destroy_user_session_path, method: :delete do
-                        (content_tag :i, "", class: "fa fa-times")+ " Annuler"
-                      end
-                    end %>
                  </div> 
                 </form> 
               </ul>

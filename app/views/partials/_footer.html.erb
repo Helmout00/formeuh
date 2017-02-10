@@ -1,18 +1,37 @@
 <!-- footer:main-footer
 Définit le footer graphique de la page
 -->
-<footer class="main-footer">
-    <div class="container">
-        <div class="pull-right">
+<% if current_user %>
+  <%= content_tag :footer,
+    class: "main-footer navbar-success" do %>
+      <div class="container">
+          <div class="pull-right">
 
-            <!-- Copyright -->
-            <div class="copyright vcenter">
-                &copy; copyright 2016
-            </div>&nbsp;
+              <!-- Copyright -->
+              <div class="copyright vcenter">
+                  &copy; copyright 2016
+              </div>&nbsp;
 
-            <i class="fa fa-qrcode fa-4x vcenter" aria-hidden="true"></i>
+              <i class="fa fa-qrcode fa-4x vcenter" aria-hidden="true"></i>
 
-        </div>
-    </div>
-</footer>
+          </div>
+      </div>
+    <% end %>
+<% else %>
+<%= content_tag :footer,
+    class: "main-footer navbar-default" do %>
+      <div class="container">
+          <div class="pull-right">
+
+              <!-- Copyright -->
+              <div class="copyright vcenter">
+                  &copy; copyright 2016
+              </div>&nbsp;
+
+              <i class="fa fa-qrcode fa-4x vcenter" aria-hidden="true"></i>
+
+          </div>
+      </div>
+    <% end %> 
+<% end %>
 <!-- end main-footer -->

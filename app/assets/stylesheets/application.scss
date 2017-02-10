@@ -23,13 +23,16 @@ navbar {
   z-index: 1;
 }
 
-.navbar-primary .active a{
+.navbar-success .active a{
   color: #ffffff;
+}
+
+.navbar-success .navbar-nav li a {
+  background-color: transparent;
 }
 
 #user {
   color: #444444;
-  background-color: transparent;
 }
 
 .form-inline {
@@ -42,7 +45,6 @@ navbar {
 }
 
 .main-footer {
-    background-color: #e7e7e7;
     height: auto;
     position: absolute;
     left: 0;
