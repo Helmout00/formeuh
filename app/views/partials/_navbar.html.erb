@@ -19,7 +19,7 @@
             <%= content_tag :li,
                 class: "active" do
                 link_to home_index_path do 
-                  (content_tag :i, "", class: "fa fa-home") + " Accueil"
+                  (content_tag :i, "", class: "fa fa-home") + " " + t('.home')
                 end
             end %>
           </ul>
@@ -39,7 +39,7 @@
             </li>
             <%= content_tag :li do
               link_to destroy_user_session_path, method: :delete do
-                (content_tag :i, " Déconnexion", class: "fa fa-sign-out text-danger")
+                (content_tag :i, t('.already_signed_out'), class: "fa fa-sign-out text-danger")
               end
             end %>
           </ul>
@@ -67,18 +67,18 @@
             <%= content_tag :li,
               class: "active" do
                 link_to home_index_path do 
-                  (content_tag :i, "", class: "fa fa-home") + " Accueil"
+                  (content_tag :i, "", class: "fa fa-home") + " " + t('.home')
                 end
             end %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <%= content_tag :li do
               link_to new_user_registration_path do
-                (content_tag :i, " Inscription", class: "fa fa-sign-in text-success")
+                (content_tag :i, t('.sign_up'), class: "fa fa-sign-in text-success")
               end
             end %>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Connexion<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= t('.sign_in') %><span class="caret"></span></a>
               <ul class="dropdown-menu">
               <form class="new_user" id="new_user" action="/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
                 <input type="hidden" name="authenticity_token" value="MnT0gETAkiFNEKVceUNnwwgOzqBpJ+EKI+my4BfhArjannHussd1LFxtbXjT6AxOoi658UuwPen4OZ9j/L8Gvg==" />
@@ -86,7 +86,7 @@
                   <div class="form-inline">
                     <div class="input-group">
                       <span for="user_email" class="input-group-addon"><i class="fa fa-at"></i></span>
-                      <input autofocus="autofocus" class="form-control" type="email" value="" name="user[email]" id="user_email" placeholder="Email" aria-describedby="basic-addon"> 
+                      <input autofocus="autofocus" class="form-control" type="email" value="" name="user[email]" id="user_email" placeholder= <%= t('.email') %> aria-describedby="basic-addon"> 
                     </div>
                   </div>
                 </div>
@@ -94,18 +94,18 @@
                   <div class="form-inline">
                     <div class="input-group">
                       <span for="user_password" class="input-group-addon"><i class="fa fa-unlock"></i></span>
-                      <input autocomplete="off" class="form-control" type="password" name="user[password]" id="user_password" placeholder="Mot de passe" aria-describedby="basic-addon">
+                      <input autocomplete="off" class="form-control" type="password" name="user[password]" id="user_password" placeholder= <%= t('.password') %> aria-describedby="basic-addon">
                     </div>
-                    <%= link_to "Mot de passe oublié ?", new_user_password_path %><br />
+                    <%= link_to t('.forgot_your_password'), new_user_password_path %><br />
                   </div>
                 </div> 
                 <div class="form-inline">
                   <input name="user[remember_me]" type="hidden" value="0" /><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
-                  <label for="user_remember_me">Souviens-toi de moi</label>
+                  <label for="user_remember_me"><%= t('.remember_me') %></label>
                 </div>
                 <div class="actions">
                   <div class="form-inline">
-                    <button type="submit" name="commit" value="Log in" data-disable-with="Log in" class="btn btn-xs btn-primary pull-left"><i class="fa fa-check"></i> Valider</button>
+                    <button type="submit" name="commit" value="Log in" data-disable-with="Log in" class="btn btn-xs btn-primary pull-left"><i class="fa fa-check"></i><%= " " + t('.sign_in') %></button>
                  </div> 
                 </form> 
               </ul>
