@@ -20,4 +20,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  partials:
+    navbar:
+      home: Home
+      sign_up: Sign up
+      sign_in: Sign in
+      sign_out: Signed out
+      email: Email
+      password: Password
+      remember_me: Remember me
+      forgot_your_password: forgot your password ?
