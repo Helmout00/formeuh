@@ -49,6 +49,8 @@ gem 'font-awesome-sass'
 #devise
 gem 'devise'
 
+gem 'forum_monster'
+
 gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
