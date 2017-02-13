@@ -25,8 +25,9 @@ en:
       home: Home
       sign_up: Sign up
       sign_in: Sign in
-      sign_out: Signed out
+      sign_out: Sign out
       email: Email
       password: Password
       remember_me: Remember me
       forgot_your_password: forgot your password ?
+      language: Language

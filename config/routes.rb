@@ -8,4 +8,8 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "home#index"
+
+  #change language
+  get 'language/:lang', to: "application#change_language", as: "change_lang"
+
 end
