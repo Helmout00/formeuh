@@ -16,8 +16,8 @@ User.create!(
 
 Category.create!(
   [
-    { :title => "General Discussion", :position => 0 },
-    { :title => "Programming Discussions", :position => 1 }
+    { "title" => "General Discussion", :position => 0 },
+    { "title" => "Programming Discussions", :position => 1 }
   ]
 )
 
