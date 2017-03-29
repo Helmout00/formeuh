@@ -3,7 +3,7 @@ Définit le footer graphique de la page
 -->
 <% if current_user %>
   <%= content_tag :footer,
-    class: "main-footer label-default" do %>
+    class: "main-footer navbar-inverse" do %>
       <div class="container">
           <div class="pull-right">
 
@@ -19,13 +19,13 @@ Définit le footer graphique de la page
     <% end %>
 <% else %>
 <%= content_tag :footer,
-    class: "main-footer label-default" do %>
+    class: "main-footer navbar-inverse" do %>
       <div class="container">
           <div class="pull-right">
 
               <!-- Copyright -->
               <div class="copyright vcenter">
-                  &copy; copyright 2016
+                  &copy; copyright 2017
               </div>&nbsp;
 
               <i class="fa fa-qrcode fa-4x vcenter" aria-hidden="true"></i>

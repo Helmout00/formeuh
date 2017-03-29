@@ -23,13 +23,14 @@ navbar {
   z-index: 1;
 }
 
-.label-default {
+.navbar-inverse {
   min-height: 30px;
+  border-radius: 0px;
 }
 
 .navbar-nav > li > a {
   padding-top: 3.8px;
-  padding-bottom: 3.8px;
+  padding-bottom: 3.8px; 
 }
 
 .dropdown-menu {
@@ -44,8 +45,20 @@ navbar {
   background-color: transparent;
 }
 
+.text-success {
+  color: #62cc64;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #ffffff;
+}
+
+.text-danger {
+    color: #f63531;
+}
+
 #user {
-  color: #444444;
+  color: #ffffff;
 }
 
 .form-inline {
@@ -63,4 +76,5 @@ navbar {
   left: 0;
   right: 0;
   bottom: 0;
+  color: #ffffff;
 }
