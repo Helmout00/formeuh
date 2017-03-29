@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
+<<<<<<< HEAD
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+=======
+>>>>>>> parent of bfb7ef2... add active admin
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register', edit: 'settings' }
   get 'home/index'
 
