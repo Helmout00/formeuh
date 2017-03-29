@@ -23,11 +23,24 @@ navbar {
   z-index: 1;
 }
 
-.navbar-success .active a{
+.label-default {
+  min-height: 30px;
+}
+
+.navbar-nav > li > a {
+  padding-top: 3.8px;
+  padding-bottom: 3.8px;
+}
+
+.dropdown-menu {
+  min-width: 10px;
+}
+
+.navbar .active a{
   color: #ffffff;
 }
 
-.navbar-success .navbar-nav li a {
+.navbar .navbar-nav li a {
   background-color: transparent;
 }
 
@@ -45,9 +58,9 @@ navbar {
 }
 
 .main-footer {
-    height: auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  height: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }

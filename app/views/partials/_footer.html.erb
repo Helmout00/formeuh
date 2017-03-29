@@ -3,7 +3,7 @@ Définit le footer graphique de la page
 -->
 <% if current_user %>
   <%= content_tag :footer,
-    class: "main-footer navbar-success" do %>
+    class: "main-footer label-default" do %>
       <div class="container">
           <div class="pull-right">
 
@@ -19,7 +19,7 @@ Définit le footer graphique de la page
     <% end %>
 <% else %>
 <%= content_tag :footer,
-    class: "main-footer navbar-default" do %>
+    class: "main-footer label-default" do %>
       <div class="container">
           <div class="pull-right">
 
