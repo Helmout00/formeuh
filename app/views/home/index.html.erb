@@ -1,27 +1,60 @@
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Email</th>
-      <th>Password</th>
-      <th>Sign in count</th>
-      <th>Current sign in at</th>
-      <th>Last sign in at</th>
-    </tr>
-  </thead>
+<div class="list-group">
+  <a href="#" class="list-group-item">
+    <span class="badge inverse">14</span>
+    <h4 class="list-group-item-heading">List group item heading</h4>
+    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+  </a>
+  <a href="#" class="list-group-item">
+    <span class="badge success">20</span>
+    <h4 class="list-group-item-heading">List group item heading</h4>
+    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+  </a>
+  <a href="#" class="list-group-item active">
+    <span class="badge info">10</span>
+    <h4 class="list-group-item-heading">List group item heading</h4>
+    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+  </a>
+  <a href="#" class="list-group-item">
+    <span class="badge danger">80</span>
+    <h4 class="list-group-item-heading">List group item heading</h4>
+    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+  </a>
+</div>
 
-  <tbody>
-    <% @users.each do |user| %>
-    <tr>
-      <th><%= user.email %></th>
-      <th><%= user.encrypted_password %></th>
-      <th><%= user.sign_in_count %></th>
-      <th><%= user.current_sign_in_at %></th>
-      <th><%= user.last_sign_in_at %></th>
-    </tr>
-    <% end %>
-  </tbody>
+<div class="panel panel-primary"> 
+  <div class="panel-heading"> 
+    <h3 class="panel-title">Panel title</h3> 
+  </div> 
+  <div class="panel-body"> Panel content </div> 
+</div> 
 
-</table>
+<div class="panel panel-success"> 
+  <div class="panel-heading"> 
+    <h3 class="panel-title">Panel title</h3> 
+  </div> 
+  <div class="panel-body"> Panel content </div> 
+</div> 
+
+<div class="panel panel-info"> 
+  <div class="panel-heading"> 
+    <h3 class="panel-title">Panel title</h3> 
+  </div> 
+  <div class="panel-body"> Panel content </div> 
+</div> 
+
+<div class="panel panel-warning"> 
+  <div class="panel-heading"> 
+    <h3 class="panel-title">Panel title</h3> 
+  </div> 
+  <div class="panel-body"> Panel content </div> 
+</div> 
+
+<div class="panel panel-danger"> 
+  <div class="panel-heading">
+    <h3 class="panel-title">Panel title</h3> 
+  </div> 
+  <div class="panel-body"> Panel content </div> 
+</div> 
 
 <textarea name="editor1"></textarea>
   <script>

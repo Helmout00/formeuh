@@ -17,22 +17,62 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+
 navbar {
-  padding-top: 70px;
   width: 100%;
   z-index: 1;
 }
 
-.navbar-success .active a{
+.navbar-inverse {
+  min-height: 30px;
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+
+.navbar-nav > li > a {
+  padding-top: 3.8px;
+  padding-bottom: 3.8px; 
+}
+
+.dropdown-menu {
+  min-width: 10px;
+}
+
+.navbar .active a{
   color: #ffffff;
 }
 
-.navbar-success .navbar-nav li a {
+.navbar .navbar-nav li a {
   background-color: transparent;
 }
 
+.text-success {
+  color: #62cc64;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #ffffff;
+}
+
+.text-danger {
+    color: #f63531;
+}
+
 #user {
-  color: #444444;
+  color: #ffffff;
+}
+
+.notice {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.alert {
+  padding-top: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 0px;
+  margin-bottom: 25px;
 }
 
 .form-inline {
@@ -45,9 +85,10 @@ navbar {
 }
 
 .main-footer {
-    height: auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  height: auto;
+  margin-top: 25px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #ffffff;
 }

@@ -11,12 +11,17 @@
 
   <body>
     <%= render partial: "partials/navbar" %>
-    <div class="container">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-
-      <%= yield %>
-      <%= render partial: "partials/footer" %>
+    <div class="notice alert-success">
+      <%= notice %>
     </div>
+    <div class="alert">
+      <%= alert %>
+    </div>
+    <div class="container">
+      
+      <%= yield %>
+
+    </div>
+    <%= render partial: "partials/footer" %>
   </body>
 </html>
